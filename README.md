@@ -63,3 +63,6 @@ E no método boot(), se insere o código: Schema::defaultStringLength(191);
 Fontes:
 https://github.com/laravel/framework/issues/17508
 https://laravel.com/docs/5.4/migrations#indexes
+
+Adicionei ao projeto o gitignore e dentro dele inseri ".env" para que ele ignore os arquivos com extensão .env
+pois cada arquivo deste deve ser setado com as configurações do ambiente (enviroment) em que se encontra.
