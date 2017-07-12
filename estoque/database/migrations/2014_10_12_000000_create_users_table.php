@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+use App\User;
+
 class CreateUsersTable extends Migration
 {
     /**
@@ -22,6 +24,12 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+		
+		factory(User::class)->create([
+			'username' => 'admin',
+			'email' => 'admin@admin.com',
+			'password' => bcrypt('admin123')
+		]);
     }
 
     /**

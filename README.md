@@ -66,3 +66,36 @@ https://laravel.com/docs/5.4/migrations#indexes
 
 Adicionei ao projeto o gitignore e dentro dele inseri ".env" para que ele ignore os arquivos com extensão .env
 pois cada arquivo deste deve ser setado com as configurações do ambiente (enviroment) em que se encontra.
+
+
+Aula 3:
+Usando git e GitHub
+
+Criamos o gitignore com a seguinte configuração:
+/vendor
+/node_modules
+/public/storage
+Homestead.yaml
+Homestead.json
+.env
+
+Na verdade o Laravel já traz em si arquivos .gitignore em cada pasta conforme necessário.
+
+Aula 4:
+Factories e Fakers
+
+Factories é um mecanismo disponível no Laravel que facilita testes e ajuda a popular tabelas de banco de dados
+
+https://laravel-news.com/learn-to-use-model-factories-in-laravel-5-1
+
+"When creating seed data in the past you could utilize Eloquent or Laravel’s query builder and that way is still supported. However, with the introduction of model factories you can use them to build out “dummy” models which can be used for both seed data and in testing."
+
+Please Note: If your app is going to send real email then you should utilize $faker->safeEmail instead of just ->email. The reason for this is ->email can potentially generate a real email, where safeEmail uses example.org that is reserved by RFC2606 for testing purposes.
+
+Usamo o Tinker, um recurso do láravel para dar comandos ao php pelo cmd. É um mecanismo Read–Eval–Print Loop (REPL)
+
+Uma prática interessante é na função up da migration de usuários um usuário admin padrão para o desenvolvimento
+!Essa prática exige cuidado!!
+
+Links: 
+Biblioteca faker: https://github.com/fzaninotto/Faker
